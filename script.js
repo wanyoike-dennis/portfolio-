@@ -14,7 +14,7 @@ function revealSections() {
 
         const revealPoint = 120;
 
-        if(sectionTop < windowHeight - revealPoint){
+        if (sectionTop < windowHeight - revealPoint) {
 
             section.classList.add("active");
 

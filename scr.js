@@ -12,11 +12,11 @@ const backToTop = document.querySelector("#backToTop");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 400){
+    if (window.scrollY > 400) {
 
         backToTop.classList.add("show");
 
-    }else{
+    } else {
 
         backToTop.classList.remove("show");
 
@@ -28,9 +28,9 @@ backToTop.addEventListener("click", () => {
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 
@@ -75,27 +75,27 @@ filterButtons.forEach(button => {
             const category = card.dataset.category;
 
 
-       if(filter === "all" || category === filter){
+            if (filter === "all" || category === filter) {
 
-    card.style.display = "block";
+                card.style.display = "block";
 
-    setTimeout(() => {
+                setTimeout(() => {
 
-        card.classList.remove("hide");
+                    card.classList.remove("hide");
 
-    }, 10);
+                }, 10);
 
-}else{
+            } else {
 
-    card.classList.add("hide");
+                card.classList.add("hide");
 
-    setTimeout(() => {
+                setTimeout(() => {
 
-        card.style.display = "none";
+                    card.style.display = "none";
 
-    }, 350);
+                }, 350);
 
-}
+            }
 
         });
 
@@ -266,4 +266,3 @@ navItems.forEach(link => {
     });
 
 });
-
