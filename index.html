@@ -15,21 +15,46 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">DN.</a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">DN.</a>
+
+            <!-- Hamburger Button -->
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
 
     <!-- Hero Section -->
     <section class="hero reveal" id="home">
@@ -44,8 +69,11 @@
                     with clean code and user-friendly interfaces.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">
-                        Download CV
+                    <a href="documents/myCv.pdf"
+    class="btn btn-secondary"
+    download>
+                        <i class="fa-solid fa-download"></i>
+    Download CV
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         Contact Me
@@ -280,7 +308,7 @@
     </section>
 
     <!-- Projects Section -->
-  
+
     <section class="projects reveal" id="projects">
 
         <div class="container">
@@ -292,21 +320,21 @@
             <p class="section-description">
 
                 Here are some of my recent software development and graphic design projects.
-
             </p>
-
             <!-- Filter Buttons -->
-
             <div class="project-filter">
-
-                <button class="filter-btn active">All</button>
-
-                <button class="filter-btn">Web</button>
-
-                <button class="filter-btn">Mobile</button>
-
-                <button class="filter-btn">Design</button>
-
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    Web
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    Mobile
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    Design
+                </button>
             </div>
 
             <!-- Projects Grid -->
@@ -315,102 +343,195 @@
 
                 <!-- Project 1 -->
 
-                <div class="project-card">
+<div class="project-card" data-category="mobile">
 
-                    <div class="project-image">
+    <div class="project-image">
 
-                        <img src="images/proj.png" alt="Cyber Café POS">
+        <img src="images/rick-morty.png"
+             alt="Rick and Morty Android App">
 
-                    </div>
-<!-- project 2 -->
-                    <div class="project-content">
+    </div>
 
-                          <span class="project-category"> Web Application</span>
-                        <h3> Cyber Café POS System</h3>
+    <div class="project-content">
 
-                        <p>
+        <span class="project-category">
+            Mobile Application
+        </span>
 
-                            A complete Point of Sale system for cyber cafés with inventory, receipt printing and
-                            customer management.
+        <h3>Rick & Morty Android App</h3>
 
-                        </p>
+        <p>
+            An Android application based on the Rick and Morty
+            API, allowing users to explore characters and
+            related information.
+        </p>
 
-                        <div class="project-tags">
+        <div class="project-tags">
 
-                            <span>React</span>
+            <span>Android</span>
 
-                            <span>Node.js</span>
+            <span>Kotlin</span>
 
-                            <span>SQLite</span>
+            <span>API</span>
 
-                        </div>
+        </div>
 
-                        <div class="project-buttons">
+        <div class="project-buttons">
 
-                            <a href="#" class="btn btn-primary">
+            <a
+                href="https://github.com/wanyoike-dennis/RickiMorty"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
 
-                                Live Demo
+        </div>
 
-                            </a>
+    </div>
 
-                            <a href="#" class="btn btn-secondary">
+</div>
 
-                                GitHub
+<!-- Project 2 -->
+<div class="project-card" data-category="web">
 
-                            </a>
+    <div class="project-image">
 
-                        </div>
+        <img src="images/proj.png"
+             alt="Cybera Cyber Café POS System">
 
-                    </div>
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-category">
+            Web Application
+        </span>
+
+        <h3>Cybera Cyber Café POS</h3>
+
+        <p>
+            A Point of Sale system designed for cyber cafés,
+            with sales, inventory and receipt management.
+        </p>
+
+        <div class="project-tags">
+
+            <span>React</span>
+
+            <span>TypeScript</span>
+
+            <span>Node.js</span>
+
+            <span>SQLite</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a
+                href="https://github.com/wanyoike-dennis/pos/tree/main/CYBERA"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Services Section -->
+
+    <section class="services reveal" id="services">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Services
+            </h2>
+
+            <p class="section-description">
+
+                I provide modern digital solutions that help businesses grow, improve efficiency and strengthen their
+                online presence.
+
+            </p>
+
+            <div class="services-grid">
+
+                <!-- Service 1 -->
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+
+                        Responsive websites and web applications built with modern technologies.
+
+                    </p>
 
                 </div>
-                <div class="project-card">
 
-                    <div class="project-image">
+                <!-- Service 2 -->
 
-                        <img src="images/proj.png" alt="Cyber Café POS">
+                <div class="service-card">
 
-                    </div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
 
-                    <div class="project-content">
+                    <h3>Mobile Apps</h3>
 
-                        <span class="project-category"> Web Application</span>
-                        <h3> Cyber Café POS System</h3>
+                    <p>
 
-                        <p>
+                        Android applications developed using Kotlin and modern Android technologies.
 
-                            A complete Point of Sale system for cyber cafés with inventory, receipt printing and
-                            customer management.
+                    </p>
 
-                        </p>
+                </div>
 
-                        <div class="project-tags">
+                <!-- Service 3 -->
 
-                            <span>React</span>
+                <div class="service-card">
 
-                            <span>Node.js</span>
+                    <i class="fa-solid fa-palette"></i>
 
-                            <span>SQLite</span>
+                    <h3>Graphic Design</h3>
 
-                        </div>
+                    <p>
 
-                        <div class="project-buttons">
+                        Logos, posters, business cards and social media graphics designed professionally.
 
-                            <a href="#" class="btn btn-primary">
+                    </p>
 
-                                Live Demo
+                </div>
 
-                            </a>
+                <!-- Service 4 -->
 
-                            <a href="#" class="btn btn-secondary">
+                <div class="service-card">
 
-                                GitHub
+                    <i class="fa-solid fa-laptop-code"></i>
 
-                            </a>
+                    <h3>IT Support</h3>
 
-                        </div>
+                    <p>
 
-                    </div>
+                        Computer maintenance, software installation, networking and technical support.
+
+                    </p>
 
                 </div>
 
@@ -419,273 +540,201 @@
         </div>
 
     </section>
- <!-- Services Section -->
 
-<section class="services reveal" id="services">
+    <!-- Contact Section -->
+    <section class="contact reveal" id="contact">
 
-    <div class="container">
+        <div class="container">
 
-        <h2 class="section-title">
-            My Services
-        </h2>
+            <h2 class="section-title"> Contact Me </h2>
 
-        <p class="section-description">
+            <p class="section-description">
 
-            I provide modern digital solutions that help businesses grow, improve efficiency and strengthen their online presence.
-
-        </p>
-
-        <div class="services-grid">
-
-            <!-- Service 1 -->
-
-            <div class="service-card">
-
-                <i class="fa-solid fa-code"></i>
-
-                <h3>Web Development</h3>
-
-                <p>
-
-                    Responsive websites and web applications built with modern technologies.
-
-                </p>
-
-            </div>
-
-            <!-- Service 2 -->
-
-            <div class="service-card">
-
-                <i class="fa-solid fa-mobile-screen-button"></i>
-
-                <h3>Mobile Apps</h3>
-
-                <p>
-
-                    Android applications developed using Kotlin and modern Android technologies.
-
-                </p>
-
-            </div>
-
-            <!-- Service 3 -->
-
-            <div class="service-card">
-
-                <i class="fa-solid fa-palette"></i>
-
-                <h3>Graphic Design</h3>
-
-                <p>
-
-                    Logos, posters, business cards and social media graphics designed professionally.
-
-                </p>
-
-            </div>
-
-            <!-- Service 4 -->
-
-            <div class="service-card">
-
-                <i class="fa-solid fa-laptop-code"></i>
-
-                <h3>IT Support</h3>
-
-                <p>
-
-                    Computer maintenance, software installation, networking and technical support.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Contact Section -->
-<section class="contact reveal" id="contact">
-
-    <div class="container">
-
-        <h2 class="section-title"> Contact Me </h2>
-
-        <p class="section-description">
-
-            Have a project in mind or want to work together? I'd love to hear from you.
-
-        </p>
-
-        <div class="contact-container">
-
-            <!-- Contact Information -->
-
-            <div class="contact-info">
-
-                <h3>Let's Talk</h3>
-
-                <p>
-
-                    Feel free to reach out through the details below or use the contact form.
-
-                </p>
-
-                <div class="contact-item">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <span>Nairobi, Kenya</span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <span>dennixtrevor@gmail.com</span>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    <span>+254 100 628 659</span>
-
-                </div>
-
-            </div>
-
-            <!-- Contact Form -->
-
-            <form class="contact-form">
-
-                <div class="form-group">
-
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        required>
-
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        required>
-
-                </div>
-
-                <input
-                    type="text"
-                    placeholder="Subject"
-                    required>
-
-                <textarea
-                    rows="6"
-                    placeholder="Your Message"
-                    required></textarea>
-
-                <button
-                    type="submit"
-                    class="btn btn-primary">
-
-                    Send Message
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Footer section -->
-<footer class="footer reveal" >
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <!-- Logo -->
-
-            <div class="footer-about">
-
-                <a href="#" class="logo">DN.</a>
-
-                <p>
-
-                    Software Engineer passionate about creating modern websites,
-                    mobile applications and digital experiences.
-
-                </p>
-
-            </div>
-
-            <!-- Quick Links -->
-
-            <div class="footer-links">
-
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="#home">Home</a></li>
-
-                    <li><a href="#about">About</a></li>
-
-                    <li><a href="#skills">Skills</a></li>
-
-                    <li><a href="#projects">Projects</a></li>
-
-                    <li><a href="#services">Services</a></li>
-
-                    <li><a href="#contact">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-            <!-- Social -->
-
-            <div class="footer-social">
-
-                <h3>Follow Me</h3>
-
-                <div class="social-icons">
-
-                    <a href="#"><i class="fab fa-github"></i></a>
-
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-
-                © 2026 Dennis Njoroge. All Rights Reserved.
+                Have a project in mind or want to work together? I'd love to hear from you.
 
             </p>
 
-        </div>
+            <div class="contact-container">
+
+                <!-- Contact Information -->
+
+                <div class="contact-info">
+
+                    <h3>Let's Talk</h3>
+
+                    <p>
+
+                        Feel free to reach out through the details below or use the contact form.
+
+                    </p>
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>Nairobi, Kenya</span>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>dennixtrevor@gmail.com</span>
+
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+254 100 628 659</span>
+                    </div>
+                </div>
+  <!-- Contact Form -->
+
+<form 
+<form
+    class="contact-form"
+    id="contactForm"
+    action="https://formspree.io/f/xvkpqryd"
+    method="POST"
+>
+
+    <div class="form-group">
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+        >
 
     </div>
 
-</footer>
-<script src="script.js"></script>
+    <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Subject"
+        required
+    >
+
+    <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="Your Message"
+        required
+    ></textarea>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer reveal">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Logo -->
+
+                <div class="footer-about">
+
+                    <a href="#" class="logo">DN.</a>
+
+                    <p>
+
+                        Software Engineer passionate about creating modern websites,
+                        mobile applications and digital experiences.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li><a href="#home">Home</a></li>
+
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#skills">Skills</a></li>
+
+                        <li><a href="#projects">Projects</a></li>
+
+                        <li><a href="#services">Services</a></li>
+
+                        <li><a href="#contact">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Social -->
+
+                <div class="footer-social">
+
+                    <h3>Follow Me</h3>
+
+                    <div class="social-icons">
+
+                        <a href="#"><i class="fab fa-github"></i></a>
+
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Dennis Njoroge. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="./scr.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
