@@ -519,6 +519,22 @@ header {
     width: 100%;
 }
 
+/* ===========================
+   Active Navigation Link
+=========================== */
+
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
 /*styling for the hero section*/
 .hero {
 
