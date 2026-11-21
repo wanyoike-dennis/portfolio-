@@ -1,108 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="Dennis Njoroge is a software engineer building practical web applications, Android apps and digital solutions for businesses.">
-  <meta property="og:title" content="Dennis Njoroge | Software Engineer">
-  <meta property="og:description" content="Building useful digital products through software engineering, web and Android development.">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Dennis Njoroge | Software Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Dennis Njoroge</title>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container">
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="logo" aria-label="Dennis Njoroge home">DN<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<main>
-<section class="hero reveal" id="home">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <p class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER · KENYA</p>
-      <p class="greeting">Hello, I'm</p>
-      <h1>Dennis <span>Njoroge.</span></h1>
-      <h2>I build digital products that solve real problems.</h2>
-      <p class="description">Software engineer focused on practical web platforms, Android applications and business systems. I enjoy taking ideas from a problem statement to a useful, working product.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore my work <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="documents/myCv.pdf" class="btn btn-secondary" download><i class="fa-solid fa-download"></i> Download CV</a>
-      </div>
-      <div class="social-icons" aria-label="Social links">
-        <a href="https://github.com/wanyoike-dennis" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dennis-wanyoike-57872b163" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:dennixtrevor@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-image"><img src="images/back.jpeg" alt="Portrait of Dennis Njoroge"></div>
-      <div class="hero-note"><i class="fa-solid fa-code"></i><span>Turning ideas into<br><strong>working software</strong></span></div>
-      <div class="hero-orbit"></div>
-    </div>
-  </div>
-  <a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i class="fa-solid fa-arrow-down"></i></a>
-</section>
-<section class="about reveal section-pad" id="about">
-  <div class="container">
-    <div class="section-kicker">A LITTLE ABOUT ME</div><h2 class="section-title">Engineering with <span>purpose.</span></h2>
-    <div class="about-content">
-      <div class="about-image"><img src="images/bg.jpeg" alt="Dennis Njoroge working in technology"></div>
-      <div class="about-text">
-        <h3>Problem solver. Builder. Lifelong learner.</h3>
-        <p>I'm a software engineer and technology enthusiast who enjoys building digital tools that make everyday work easier. My interests span full-stack development, Android engineering, databases and the design of reliable business applications.</p>
-        <p>I work across the product lifecycle: understanding user needs, shaping workflows, building interfaces, connecting backend services and improving the experience through testing and iteration.</p>
-        <p>I also enjoy sharing knowledge through technology training and helping people become more confident using digital tools.</p>
-        <ul class="about-list"><li><i class="fa-solid fa-check"></i> Full-stack web application development</li><li><i class="fa-solid fa-check"></i> Native Android development</li><li><i class="fa-solid fa-check"></i> Database design and integration</li><li><i class="fa-solid fa-check"></i> Technical training and IT support</li></ul>
-      </div>
-    </div>
-    <div class="stats">
-      <div class="stat-card"><h3>Web</h3><p>Application Development</p></div><div class="stat-card"><h3>Android</h3><p>Mobile Development</p></div><div class="stat-card"><h3>Data</h3><p>Database Systems</p></div><div class="stat-card"><h3>IT</h3><p>Training & Support</p></div>
-    </div>
-  </div>
-</section>
-<section class="skills reveal section-pad" id="skills">
- <div class="container"><div class="section-kicker">TOOLS OF THE TRADE</div><h2 class="section-title">Technical <span>skills.</span></h2><p class="section-description">A practical toolkit for designing, developing and supporting digital products.</p>
-  <div class="skills-groups">
-   <div class="skill-group"><h3><i class="fa-solid fa-display"></i> Frontend</h3><div class="skill-pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Tailwind CSS</span></div></div>
-   <div class="skill-group"><h3><i class="fa-solid fa-server"></i> Backend</h3><div class="skill-pills"><span>Node.js</span><span>Express.js</span><span>NestJS</span><span>REST APIs</span><span>Java</span></div></div>
-   <div class="skill-group"><h3><i class="fa-brands fa-android"></i> Mobile</h3><div class="skill-pills"><span>Android</span><span>Kotlin</span><span>Room</span><span>MVVM</span></div></div>
-   <div class="skill-group"><h3><i class="fa-solid fa-database"></i> Data & Tools</h3><div class="skill-pills"><span>PostgreSQL</span><span>SQLite</span><span>SQL</span><span>Git</span><span>GitHub</span><span>VS Code</span></div></div>
-   <div class="skill-group"><h3><i class="fa-solid fa-pen-ruler"></i> Design & Productivity</h3><div class="skill-pills"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Microsoft Office</span><span>UI/UX principles</span></div></div>
-  </div>
- </div>
-</section>
-<section class="projects reveal section-pad" id="projects">
- <div class="container"><div class="section-kicker">SELECTED WORK</div><h2 class="section-title">Projects I've <span>built.</span></h2><p class="section-description">A selection of software projects covering business operations, personal finance, network management and mobile experiences.</p>
-  <div class="project-filter" role="group" aria-label="Filter projects"><button class="filter-btn active" data-filter="all" aria-pressed="true">All work</button><button class="filter-btn" data-filter="web" aria-pressed="false">Web platforms</button><button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile apps</button></div>
-  <div class="projects-grid">
-   <article class="project-card" data-category="web"><div class="project-art project-art-invent"><span>INVENT<span class="art-dot">.</span></span><small>BUSINESS OPERATIONS</small><i class="fa-solid fa-chart-line"></i></div><div class="project-content"><span class="project-category">SAAS · WEB APPLICATION</span><h3>Invent POS</h3><p>A multi-tenant point-of-sale platform designed to help businesses manage sales, inventory, customers and day-to-day operations.</p><div class="project-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span></div><div class="project-buttons"><a class="btn btn-secondary" href="https://inventsolution.online" target="_blank" rel="noopener noreferrer">Visit platform <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="text-link" href="https://github.com/wanyoike-dennis/Invent-POS" target="_blank" rel="noopener noreferrer">Repository <i class="fa-brands fa-github"></i></a></div></div></article>
-   <article class="project-card" data-category="mobile"><div class="project-art project-art-trackit"><span>Track<span>It.</span></span><small>PERSONAL FINANCE</small><i class="fa-solid fa-wallet"></i></div><div class="project-content"><span class="project-category">ANDROID · MOBILE APPLICATION</span><h3>TrackIt</h3><p>An offline-first personal finance app focused on recording transactions, managing budgets and understanding spending patterns.</p><div class="project-tags"><span>Kotlin</span><span>Android</span><span>Room</span><span>MVVM</span></div><div class="project-buttons"><a class="btn btn-secondary" href="https://github.com/wanyoike-dennis/TrackIt" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fa-brands fa-github"></i></a></div></div></article>
-   <article class="project-card" data-category="web"><div class="project-art project-art-isp"><span>NET<span>MAN</span></span><small>NETWORK MANAGEMENT</small><i class="fa-solid fa-network-wired"></i></div><div class="project-content"><span class="project-category">WEB PLATFORM · BACKEND API</span><h3>ISP Management Platform</h3><p>A platform in development for internet service provider operations, with a web interface and a structured backend API.</p><div class="project-tags"><span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>REST API</span></div><div class="project-buttons"><a class="btn btn-secondary" href="https://github.com/wanyoike-dennis/isp-management-platform" target="_blank" rel="noopener noreferrer">View repository <i class="fa-brands fa-github"></i></a></div></div></article>
-   <article class="project-card" data-category="web"><div class="project-image"><img src="images/cybera.jpg" alt="Cybera cyber cafe point of sale interface" loading="lazy"></div><div class="project-content"><span class="project-category">WEB APPLICATION</span><h3>Cybera Cyber Café POS</h3><p>A point-of-sale solution for cyber cafés, designed around sales, inventory and receipt management.</p><div class="project-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>SQLite</span></div><div class="project-buttons"><a class="btn btn-secondary" href="https://github.com/wanyoike-dennis/pos/tree/main/CYBERA" target="_blank" rel="noopener noreferrer">View project <i class="fa-brands fa-github"></i></a></div></div></article>
-   <article class="project-card" data-category="mobile"><div class="project-image"><img src="images/rick.jpg" alt="Rick and Morty Android app" loading="lazy"></div><div class="project-content"><span class="project-category">ANDROID APPLICATION</span><h3>Rick & Morty Explorer</h3><p>An Android application that consumes the Rick and Morty API to let users explore characters and related information.</p><div class="project-tags"><span>Android</span><span>Kotlin</span><span>REST API</span></div><div class="project-buttons"><a class="btn btn-secondary" href="https://github.com/wanyoike-dennis/RickiMorty" target="_blank" rel="noopener noreferrer">View project <i class="fa-brands fa-github"></i></a></div></div></article>
-  </div>
- </div>
-</section>
-<section class="services reveal section-pad" id="services"><div class="container"><div class="section-kicker">HOW I CAN HELP</div><h2 class="section-title">What I <span>do.</span></h2><p class="section-description">From a new idea to improving an existing system, I help turn technology needs into practical solutions.</p>
- <div class="services-grid"><article class="service-card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Responsive websites, business platforms and web applications built around real user workflows.</p></article><article class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Android Development</h3><p>Native Android applications with thoughtful interfaces and dependable local data handling.</p></article><article class="service-card"><i class="fa-solid fa-database"></i><h3>Backend & Databases</h3><p>REST APIs, database design and integration to support secure, maintainable applications.</p></article><article class="service-card"><i class="fa-solid fa-graduation-cap"></i><h3>IT Training & Support</h3><p>Computer training, software guidance and practical technical support for learners and businesses.</p></article></div>
- </div></section>
-<section class="contact reveal section-pad" id="contact"><div class="container"><div class="section-kicker">LET'S CONNECT</div><h2 class="section-title">Have a project in <span>mind?</span></h2><p class="section-description">Tell me what you're working on. I'm open to meaningful projects, collaborations and opportunities.</p>
- <div class="contact-container"><div class="contact-info"><h3>Let's talk.</h3><p>The best way to start is with a conversation about the problem you're trying to solve.</p><a class="contact-item" href="mailto:dennixtrevor@gmail.com"><i class="fa-solid fa-envelope"></i><span>dennixtrevor@gmail.com</span></a><a class="contact-item" href="tel:+254100628659"><i class="fa-solid fa-phone"></i><span>+254 100 628 659</span></a><div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Kenya</span></div><div class="social-icons"><a href="https://github.com/wanyoike-dennis" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/dennis-wanyoike-57872b163" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div>
- <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvkpqryd" method="POST"><div class="form-group"><input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required><input type="email" id="email" name="email" placeholder="Email address" autocomplete="email" required></div><input type="text" id="subject" name="subject" placeholder="Subject" required><textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea><button type="submit" class="btn btn-primary">Send message <i class="fa-solid fa-paper-plane"></i></button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></form></div>
- </div></section>
-</main>
-<footer class="footer"><div class="container footer-bottom"><a href="#home" class="logo">DN<span>.</span></a><p>Designed & built by Dennis Njoroge · <span id="year">2026</span></p><a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a></div></footer>
-<script src="./scr.js" defer></script><script src="./script.js" defer></script>
-</body></html>
+    <header>
+
+        <div class="container">
+
+            <nav class="navbar">
+
+                <a href="#" class="logo">DN.</a>
+
+                <!-- Hamburger Button -->
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- Navigation Links -->
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#skills">Skills</a></li>
+
+                    <li><a href="#projects">Projects</a></li>
+
+                    <li><a href="#services">Services</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero reveal" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <p class="greeting">Hello, I'm</p>
+                <h1>Dennis Njoroge</h1>
+                <h2>Software Engineer & Full Stack Web Developer</h2>
+                <p class="description">
+                I’m a Software Engineer passionate about turning ideas into practical, 
+                modern, and user-friendly digital solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="documents/myCv.pdf" class="btn btn-secondary" download>
+                        <i class="fa-solid fa-download"></i>
+                        Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/back.jpeg" alt="Dennis Njoroge">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about reveal" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/bg.jpeg" alt="Dennis Njoroge">
+                </div>
+                <div class="about-text">
+                    <h3>Who Am I?</h3>
+                    <p>
+                      I’m a passionate Software Engineer and technology enthusiast focused 
+                      on building practical, modern, and user-friendly digital solutions. 
+                      I enjoy turning ideas into functional applications and websites that 
+                      solve real-world problems and create meaningful experiences for users.
+                    </p>
+                    <p>
+                        My experience spans web development, Android development, software engineering, 
+                        and database systems, with hands-on experience using technologies such as JavaScript, 
+                        TypeScript, React, Kotlin, Java, HTML, CSS, SQL, and Tailwind CSS.
+                    </p>
+                                        <p>
+                     I’m particularly interested in creating clean and responsive interfaces, 
+                     developing reliable applications, and continuously learning new technologies. 
+                     I also enjoy exploring how technology can be used to improve businesses, automate 
+                     processes, and make everyday tasks easier.
+                    </p>
+                    <p>
+                        Beyond writing code, I value problem-solving, continuous learning, 
+                        attention to detail, and building solutions that have a real impact. 
+                        I’m always open to challenging projects and opportunities to grow as a 
+                        developer while contributing to innovative technology solutions.
+                    </p>
+                    <ul class="about-list">
+                        <li>✔ Full Stack Web Development</li>
+
+                        <li>✔ Responsive Website Design</li>
+
+                        <li>✔ Android Application Development</li>
+
+                        <li>✔ UI/UX Friendly Interfaces</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>15+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>3+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p>Technologies</p>
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>100+</h3>
+
+                    <p>Students Trained</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills reveal" id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">My Skills</h2>
+
+            <!-- Frontend -->
+            <h3 class="skill-category">Frontend Development</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic and accessible web structure.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Responsive layouts using Flexbox and Grid.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interactive web applications.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Modern component-based frontend development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-bootstrap"></i>
+                    <h3>Bootstrap</h3>
+                    <p>Build responsive websites quickly.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Tailwind CSS</h3>
+                    <p>Utility-first CSS framework.</p>
+                </div>
+
+            </div>
+
+            <!-- Backend -->
+            <h3 class="skill-category">Backend Development</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Express.js</h3>
+                    <p>Fast and lightweight backend framework.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Object-oriented programming language.</p>
+                </div>
+
+            </div>
+
+            <!-- Mobile -->
+            <h3 class="skill-category">Mobile Development</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fab fa-android"></i>
+                    <h3>Android Development</h3>
+                    <p>Native Android application development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Kotlin</h3>
+                    <p>Modern Android programming language.</p>
+                </div>
+
+            </div>
+
+            <!-- Database -->
+            <h3 class="skill-category">Database</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Database design and querying.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQLite</h3>
+                    <p>Lightweight embedded database.</p>
+                </div>
+
+            </div>
+
+            <!-- Tools -->
+            <h3 class="skill-category">Tools & Design</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <p>Version control system.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Code hosting and collaboration.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>VS Code</h3>
+                    <p>Professional code editor.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-bezier-curve"></i>
+                    <h3>Adobe Illustrator</h3>
+                    <p>Vector graphics and logo design.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Adobe Photoshop</h3>
+                    <p>Professional image editing.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+
+    <section class="projects reveal" id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+            <p class="section-description">
+
+                Here are some of my recent software development and graphic design projects.
+            </p>
+            <!-- Filter Buttons -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    Web
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    Mobile
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    Design
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+
+                <div class="project-card" data-category="mobile">
+
+                    <div class="project-image">
+
+                        <img src="images/rick.jpg" alt="Rick and Morty Android App">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Mobile Application
+                        </span>
+
+                        <h3>Rick & Morty Android App</h3>
+
+                        <p>
+                            An Android application based on the Rick and Morty
+                            API, allowing users to explore characters and
+                            related information.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Android</span>
+
+                            <span>Kotlin</span>
+
+                            <span>API</span>
+                           
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="https://github.com/wanyoike-dennis/RickiMorty" class="btn btn-secondary"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web">
+
+                    <div class="project-image">
+
+                        <img src="images/cybera.jpg" alt="Cybera Cyber Café POS System">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Web Application
+                        </span>
+
+                        <h3>Cybera Cyber Café POS</h3>
+
+                        <p>
+                            A Point of Sale system designed for cyber cafés,
+                            with sales, inventory and receipt management.
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>React</span>
+
+                            <span>TypeScript</span>
+
+                            <span>Node.js</span>
+
+                            <span>SQLite</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a href="https://github.com/wanyoike-dennis/pos/tree/main/CYBERA" class="btn btn-secondary"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Invent POS -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/proj.png" alt="Invent POS point of sale system">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Application</span>
+                        <h3>Invent POS</h3>
+                        <p>A multi-tenant point of sale and business management platform for sales, inventory, customers and reporting.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://inventsolution.online" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="https://github.com/wanyoike-dennis/Invent-POS" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TrackIt -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="images/proj.png" alt="TrackIt personal finance Android app">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Mobile Application</span>
+                        <h3>TrackIt – Personal Finance</h3>
+                        <p>An offline-first Android finance app for recording transactions, managing budgets and tracking personal finances.</p>
+                        <div class="project-tags">
+                            <span>Android</span><span>Kotlin</span><span>Room</span><span>MVVM</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/wanyoike-dennis/TrackIt" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ISP Management Platform -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/proj.png" alt="ISP management platform">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Application</span>
+                        <h3>ISP Management Platform</h3>
+                        <p>An internet service provider management platform, with a web interface and backend services currently under development.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>TypeScript</span><span>NestJS</span><span>PostgreSQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/wanyoike-dennis/isp-management-platform" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Services Section -->
+
+    <section class="services reveal" id="services">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Services
+            </h2>
+
+            <p class="section-description">
+
+                I provide modern digital solutions that help businesses grow, improve efficiency and strengthen their
+                online presence.
+
+            </p>
+
+            <div class="services-grid">
+
+                <!-- Service 1 -->
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+
+                        Responsive websites and web applications built with modern technologies.
+
+                    </p>
+
+                </div>
+
+                <!-- Service 2 -->
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    <h3>Mobile Apps</h3>
+
+                    <p>
+
+                        Android applications developed using Kotlin and modern Android technologies.
+
+                    </p>
+
+                </div>
+
+                <!-- Service 3 -->
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <h3>Graphic Design</h3>
+
+                    <p>
+
+                        Logos, posters, business cards and social media graphics designed professionally.
+
+                    </p>
+
+                </div>
+
+                <!-- Service 4 -->
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <h3>IT Support</h3>
+
+                    <p>
+
+                        Computer maintenance, software installation, networking and technical support.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact reveal" id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title"> Contact Me </h2>
+
+            <p class="section-description">
+
+                Have a project in mind or want to work together? I'd love to hear from you.
+
+            </p>
+
+            <div class="contact-container">
+
+                <!-- Contact Information -->
+
+                <div class="contact-info">
+
+                    <h3>Let's Talk</h3>
+
+                    <p>
+
+                        Feel free to reach out through the details below or use the contact form.
+
+                    </p>
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>Nairobi, Kenya</span>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>dennixtrevor@gmail.com</span>
+
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+254 100 628 659</span>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+
+                <form <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvkpqryd"
+                    method="POST">
+
+                    <div class="form-group">
+
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+                    </div>
+
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer reveal">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Logo -->
+
+                <div class="footer-about">
+
+                    <a href="#" class="logo">DN.</a>
+
+                    <p>
+
+                        Software Engineer passionate about creating modern websites,
+                        mobile applications and digital experiences.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li><a href="#home">Home</a></li>
+
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#skills">Skills</a></li>
+
+                        <li><a href="#projects">Projects</a></li>
+
+                        <li><a href="#services">Services</a></li>
+
+                        <li><a href="#contact">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Social -->
+
+                <div class="footer-social">
+
+                    <h3>Follow Me</h3>
+
+                    <div class="social-icons">
+
+                        <a href="https://github.com/wanyoike-dennis"><i class="fab fa-github"></i></a>
+
+                        <a href="https://www.linkedin.com/in/dennis-wanyoike-57872b163"><i class="fab fa-linkedin"></i></a>
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Dennis Njoroge. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="./scr.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
