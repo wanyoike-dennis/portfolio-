@@ -1,100 +1,340 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTop = document.querySelector("#backToTop");
-  const menuToggle = document.querySelector("#menuToggle");
-  const navLinks = document.querySelector("#navLinks");
-  const form = document.querySelector("#contactForm");
-  const status = document.querySelector("#formStatus");
-  const year = document.querySelector("#year");
+/* ==========================================
+   Portfolio JavaScript
+========================================== */
 
-  if (year) year.textContent = new Date().getFullYear();
+console.log("Portfolio JavaScript loaded successfully");
 
-  const updateBackToTop = () => {
-    if (backToTop) backToTop.classList.toggle("show", window.scrollY > 400);
-  };
-  window.addEventListener("scroll", updateBackToTop, { passive: true });
-  updateBackToTop();
-  backToTop?.addEventListener("click", event => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+/* ==========================================
+   Back To Top
+========================================== */
 
-  menuToggle?.addEventListener("click", () => {
-    const isOpen = navLinks?.classList.toggle("active") ?? false;
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-    menuToggle.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
+const backToTop = document.querySelector("#backToTop");
 
-  navLinks?.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      menuToggle?.setAttribute("aria-expanded", "false");
-      if (menuToggle) {
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      }
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
     });
-  });
 
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
-  filterButtons.forEach(button => {
+});
+
+/* ==========================================
+   Project Filtering
+========================================== */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const projectCards = document.querySelectorAll(".project-card");
+
+
+filterButtons.forEach(button => {
+
     button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-      filterButtons.forEach(item => {
-        const active = item === button;
-        item.classList.toggle("active", active);
-        item.setAttribute("aria-pressed", String(active));
-      });
-      projectCards.forEach(card => {
-        card.hidden = filter !== "all" && card.dataset.category !== filter;
-      });
-    });
-  });
 
-  form?.addEventListener("submit", async event => {
+        /* Get selected category */
+
+        const filter = button.dataset.filter;
+
+
+        /* Remove active class from all buttons */
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        /* Add active class to clicked button */
+
+        button.classList.add("active");
+
+
+        /* Filter projects */
+
+        projectCards.forEach(card => {
+
+            const category = card.dataset.category;
+
+
+            if (filter === "all" || category === filter) {
+
+                card.style.display = "block";
+
+                setTimeout(() => {
+
+                    card.classList.remove("hide");
+
+                }, 10);
+
+            } else {
+
+                card.classList.add("hide");
+
+                setTimeout(() => {
+
+                    card.style.display = "none";
+
+                }, 350);
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ==========================================
+   Contact Form
+========================================== */
+
+const contactForm = document.querySelector("#contactForm");
+
+contactForm.addEventListener("submit", async (event) => {
+
+    /* Prevent normal form submission */
+
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const submitButton = form.querySelector("button[type='submit']");
-    if (!submitButton) return;
-    const originalLabel = submitButton.innerHTML;
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-    if (status) {
-      status.textContent = "";
-      status.classList.remove("error");
-    }
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      });
-      if (!response.ok) throw new Error("Message submission failed");
-      form.reset();
-      if (status) status.textContent = "Thanks for reaching out. Your message has been sent.";
-    } catch (error) {
-      if (status) {
-        status.textContent = "Your message could not be sent. Please try again or email me directly.";
-        status.classList.add("error");
-      }
-    } finally {
-      submitButton.disabled = false;
-      submitButton.innerHTML = originalLabel;
-    }
-  });
 
-  const sections = document.querySelectorAll("main section[id]");
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      document.querySelectorAll(".nav-links a").forEach(link => {
-        const active = link.getAttribute("href") === "#" + entry.target.id;
-        link.classList.toggle("active", active);
-      });
+
+    /* Get form values */
+
+    const name = document.querySelector("#name").value.trim();
+
+    const email = document.querySelector("#email").value.trim();
+
+    const subject = document.querySelector("#subject").value.trim();
+
+    const message = document.querySelector("#message").value.trim();
+
+
+    /* Check name */
+
+    if (name === "") {
+
+        alert("Please enter your name.");
+
+        return;
+
+    }
+
+
+    /* Check email */
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!emailPattern.test(email)) {
+
+        alert("Please enter a valid email address.");
+
+        return;
+
+    }
+
+
+    /* Check subject */
+
+    if (subject === "") {
+
+        alert("Please enter a subject.");
+
+        return;
+
+    }
+
+
+    /* Check message */
+
+    if (message === "") {
+
+        alert("Please enter your message.");
+
+        return;
+
+    }
+
+
+    /* Disable button while sending */
+
+    const submitButton =
+        contactForm.querySelector("button[type='submit']");
+
+    submitButton.disabled = true;
+
+    submitButton.textContent = "Sending...";
+
+
+    try {
+
+        /* Send form to Formspree */
+
+        const response = await fetch(
+            contactForm.action,
+            {
+                method: "POST",
+
+                body: new FormData(contactForm),
+
+                headers: {
+                    "Accept": "application/json"
+                }
+            }
+        );
+
+
+        if (response.ok) {
+
+            alert(
+                "Thank you! Your message has been sent successfully."
+            );
+
+            contactForm.reset();
+
+        } else {
+
+            alert(
+                "Something went wrong. Please try again."
+            );
+
+        }
+
+    } catch (error) {
+
+        alert(
+            "Unable to send your message. Please check your internet connection."
+        );
+
+    }
+
+
+    /* Enable button again */
+
+    submitButton.disabled = false;
+
+    submitButton.textContent = "Send Message";
+
+});
+
+
+/* ==========================================
+   Mobile Navigation
+========================================== */
+
+const menuToggle = document.querySelector("#menuToggle");
+
+const navLinks = document.querySelector("#navLinks");
+
+
+menuToggle.addEventListener("click", () => {
+
+    /* Open / close menu */
+
+    navLinks.classList.toggle("active");
+
+
+    /* Change hamburger icon */
+
+    if (navLinks.classList.contains("active")) {
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-xmark"></i>';
+
+    } else {
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+    }
+
+});
+
+
+/* Close menu when navigation link is clicked */
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
     });
-  }, { rootMargin: "-30% 0px -60% 0px" });
-  sections.forEach(section => sectionObserver.observe(section));
+
+});
+
+/* ==========================================
+   Active Navigation Link
+========================================== */
+
+const sections = document.querySelectorAll("section[id]");
+
+const navigationLinks =
+    document.querySelectorAll(".nav-links a");
+
+
+window.addEventListener("scroll", () => {
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 150;
+
+        const sectionHeight =
+            section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            currentSection = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navigationLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") ===
+            `#${currentSection}`
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
 });
